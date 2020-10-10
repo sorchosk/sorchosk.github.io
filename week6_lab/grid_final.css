@@ -1,0 +1,105 @@
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  background: purple;
+  height: 100px;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+
+/* Add your grid CSS below here */
+* {box-sizing: border-box;}
+
+/*
+.wrapper {
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: 100px;
+  grid-template-areas: 
+    "a a a a b b b b"
+    "a a a a b b b b"
+    "c c c c d d d d"
+    "c c c c d d d d";
+  align-items: start;
+}
+
+.item1 {
+  grid-area: a;
+}
+.item2 {
+  grid-area: b;
+}
+.item3 {
+  grid-area: c;
+}
+.item4 {
+  grid-area: d;
+}
+*/
+.wrapper {
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-gap: 10px;
+  grid-auto-rows: 100px;
+  grid-template-areas: 
+  "hd hd hd hd hd hd hd hd hd"
+  "sd sd sd main main main main main main"
+  "sd sd sd ft ft ft ft ft ft";
+}
+
+.wrapper > div {
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
+}
+
+.header {
+  grid-area: hd;
+  transition: background-color .5s;
+}
+.header:hover {
+  background-color: #FFFF00;
+}
+.header:active {
+  background-color: #0250bb;
+}
+.footer {
+  grid-area: ft;
+}
+.footer:hover {
+  grid-area: ft;
+  background-color: #FFFF00;
+}
+.content {
+  grid-area: main;
+}
+.content:hover {
+  grid-area: main;
+  background-color: #FFFF00;
+}
+.sidebar {
+  grid-area: sd;
+}
+.sidebar:hover {
+  grid-area: sd;
+  background-color: #FFFF00;
+}

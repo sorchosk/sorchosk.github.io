@@ -1,0 +1,51 @@
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  background: purple;
+  height: 100px;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+
+img.thumbnail {
+	max-width: 300px;
+	max-height: auto;
+}
+
+/* Add your flexbox CSS below here */
+.container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.card {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.card:nth-of-type(3n-2) {
+  flex: 1;
+}
+
+.card:nth-of-type(3n-1),
+.card:nth-of-type(3n) {
+  flex: 2;
+}
+
+.text {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  padding: 10px;
+}
