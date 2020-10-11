@@ -6,103 +6,109 @@
     <link rel="stylesheet" href="style.css">
     <title>Bun Bun Bake Shop</title>
 </head>
-<body class="page page--home">
+<body class="page page--flavor">
     <!-- Header -->
     <header>
-        <a href="index.html">
-            <img src="img/SVG/logo--dark.svg" alt="Bun Bun Bake Shop Logo">
-        </a>
-        <nav class="header__nav">
-            <ul class="nav">
-                <li class="header__li">
-                    <a href="./about.html" class="header__a">
-                        About Us
-                    </a>
-                </li>
-                <li class="header__li">
-                    <a href="./flavors.html" class="header__a btn btn--primary">
-                        Order Online
-                    </a>
-                </li>
-                <li class="header__li">
-                    <a href="#" class="header__a">
-                        <img src="img/SVG/basket.svg" alt="Basket">
-                    </a>
-                </li>
-            </ul>
-        </nav>
+        <div class="container header__container">
+            <a href="index.html">
+                <img src="img/SVG/logo--dark.svg" alt="Bun Bun Bake Shop Logo">
+            </a>
+            <nav class="header__nav">
+                <ul class="nav">
+                    <li class="header__li">
+                        <a href="./about.html" class="header__a">
+                            About Us
+                        </a>
+                    </li>
+                    <li class="header__li">
+                        <a href="./flavors.html" class="header__a btn btn--primary">
+                            Order Online
+                        </a>
+                    </li>
+                    <li class="header__li">
+                        <a href="#" class="header__a">
+                            <img src="img/SVG/basket.svg" alt="Basket">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <!-- Main -->
     <main>
-        <div class="heading">
-            <h1 class="text-center">Original</h1>
-            <p class="text-center text-large">The traditional fluffy, soft, and gooey cinnamon rolls that made us famous.</p>
-            <a class="text-center" href="./flavors.html">Change Flavor</a>
-        </div>
+        <div class="container">
+            <div class="heading">
+                <h1 class="text-center">Original</h1>
+                <p class="text-center text-large">The traditional fluffy, soft, and gooey cinnamon rolls that made us famous.</p>
+                <a class="text-center" href="./flavors.html">Change Flavor</a>
+            </div>
 
-        <div class="flavor__display">
-            <img src="img/2x/original@2x.jpg" alt="Original Bun" class="flavor__img">
-            <form class="flavor__variants">
-                <h2 class="flavor__h2">Customize your Order</h2>
-                <div class="flavor__btn-group">
-                    <h3 class="flavor__h3">Select an Icing Flavor</h3>
-                    <div class="btn-group">
-                        <button href="" class="btn btn--secondary">None</button>
-                        <button href="" class="btn btn--secondary">Sugar Milk</button>
-                        <button href="" class="btn btn--secondary">Vanilla Milk</button>
-                        <button href="" class="btn btn--secondary">Double Chocolate</button>
+            <div class="flavor__display">
+                <img src="img/2x/original@2x.jpg" alt="Original Bun" class="flavor__img">
+                <form class="flavor__variants">
+                    <h2 class="flavor__h2">Customize your Order</h2>
+                    <div class="flavor__btn-group">
+                        <h3 class="flavor__h3">Select an Icing Flavor</h3>
+                        <div class="btn-group">
+                            <button href="" class="btn btn--secondary">None</button>
+                            <button href="" class="btn btn--secondary">Sugar Milk</button>
+                            <button href="" class="btn btn--secondary">Vanilla Milk</button>
+                            <button href="" class="btn btn--secondary">Double Chocolate</button>
+                        </div>
                     </div>
-                </div>
-                <div class="flavor__btn-group">
-                    <h3 class="flavor__h3">Select an Amount</h3>
-                    <div class="btn-group">
-                        <button href="" class="btn btn--secondary">1</button>
-                        <button href="" class="btn btn--secondary">3</button>
-                        <button href="" class="btn btn--secondary">6</button>
-                        <button href="" class="btn btn--secondary">12</button>
+                    <div class="flavor__btn-group">
+                        <h3 class="flavor__h3">Select an Amount</h3>
+                        <div class="btn-group">
+                            <button href="" class="btn btn--secondary">1</button>
+                            <button href="" class="btn btn--secondary">3</button>
+                            <button href="" class="btn btn--secondary">6</button>
+                            <button href="" class="btn btn--secondary">12</button>
+                        </div>
                     </div>
-                </div>
-                <div class="flavor__price">
-                    <h4 class="flavor__h4"><sup>&dollar;</sup>7.99</h4>
-                    <button class="btn btn--primary">Add to Basket</button>
-                </div>
-            </form>
+                    <div class="flavor__price">
+                        <h4 class="flavor__h4"><sup>&dollar;</sup>7.99</h4>
+                        <button class="btn btn--primary">Add to Basket</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </main>
 
     <!-- Footer -->
     <footer>
-        <div class="footer--left">
-            <ul class="nav footer__links">
-                <li>
-                    <a href="#">Order Online</a>
-                </li>
-                <li>
-                    <a href="#">Log In</a>
-                </li>
-                <li>
-                    <a href="#">Create an Account</a>
-                </li>
-            </ul>
-            <p class="footer__copyright">Copyright &copy; Bun Bun Bake Shop 2020. All Rights Reserved.</p>
-        </div>
+        <div class="container container__footer">
+            <div class="footer--left">
+                <ul class="nav footer__links">
+                    <li>
+                        <a href="#">Order Online</a>
+                    </li>
+                    <li>
+                        <a href="#">Log In</a>
+                    </li>
+                    <li>
+                        <a href="#">Create an Account</a>
+                    </li>
+                </ul>
+                <p class="footer__copyright">Copyright &copy; Bun Bun Bake Shop 2020. All Rights Reserved.</p>
+            </div>
 
-        <img src="img/SVG/bun.svg" alt="Bun">
+            <img src="img/SVG/bun.svg" alt="Bun">
 
-        <div class="footer--right">
-            <ul class="nav footer__links">
-                <li>
-                    <a href="#">About Us</a>
-                </li>
-                <li>
-                    <a href="#">Privacy Policy</a>
-                </li>
-                <li>
-                    <a href="#">Terms and Conditions</a>
-                </li>
-            </ul>
-            <p class="footer__copyright">Icons by Noun Project. Photos by Pexels.com</p>
+            <div class="footer--right">
+                <ul class="nav footer__links">
+                    <li>
+                        <a href="./about.html">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#">Terms and Conditions</a>
+                    </li>
+                </ul>
+                <p class="footer__copyright">Icons by Noun Project. Photos by Pexels.com</p>
+            </div>
         </div>
     </footer>
 </body>
