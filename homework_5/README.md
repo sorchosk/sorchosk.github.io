@@ -3,9 +3,9 @@ by Steve Orchosky
 05630-C PUI
 
 ## Homework 5
-Homepage: https://sorchosk.github.io/homework_5/index.html
-Product Grid: https://sorchosk.github.io/homework_5/flavors.html
-Product Display Page: https://sorchosk.github.io/homework_5/original.html
+Homepage: https://sorchosk.github.io/homework_5/index.html  
+Product Grid: https://sorchosk.github.io/homework_5/flavors.html  
+Product Display Page: https://sorchosk.github.io/homework_5/original.html  
 
 ### Extra Pages
 1. https://sorchosk.github.io/homework_5/blackberry.html
