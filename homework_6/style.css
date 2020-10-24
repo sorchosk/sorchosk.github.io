@@ -460,6 +460,49 @@ h2.flavors__h2 {
     margin: 1.5em 0 0;
 }
 
+/* BASKET */
+.basket-item {
+    align-items: center;
+    border-bottom: 1px solid var(--light-gray);
+    padding: 2em 0;
+    width: 100%;
+}
+
+.basket-item img{
+    padding: 0;
+}
+
+.basket-item__p {
+    color: var(--black);
+    font-size: 1.2em;
+    font-weight: 700;
+    letter-spacing: .05em;
+    margin: 0 auto 0 1em;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.basket-item__remove {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: start;
+    justify-self: right;
+    opacity: .5;
+    padding: 1em;
+    transition: all .3s ease-in-out;
+}
+
+.basket-item__remove:hover {
+    opacity: 1;
+}
+
+.basket-item__remove p {
+    letter-spacing: .05em;
+    padding: 0 0 0 .5em;
+    text-transform: uppercase;
+}
+
 
 /*
 ###########
