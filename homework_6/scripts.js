@@ -1,6 +1,10 @@
+// #############
+// ASSIGNMENT 6A
+// #############
+
 // ADD BUN TO AN ARRAY
 
-// set up array
+// set up array for all orders
 let bunOrderArray = [];
 
 // Product Page Subtotal Variable
@@ -68,9 +72,33 @@ function addToBasket() {
     return;
 }
 
+// DISPLAY NUMBER OF OBJECTS IN LOCAL STORAGE
+function basketCount() {
+    let fullOrderJson = localStorage.getItem("fullOrder");
+    // Parse local storage
+    let fullOrder = JSON.parse(fullOrderJson);
+    // Get number of objects from parsed local storage array
+    let numberOfBasketObjects = fullOrder.length;
+    // Render as an HTML signifier on the basket icon
+    let basket = document.getElementById("basket");
+    let basketBadge = document.createElement("div");
+    basketBadge.className = "basket-badge";
+    basketBadge.innerText = numberOfBasketObjects;
+    if (numberOfBasketObjects < 1) {
+        return;
+    } else {
+        basket.appendChild(basketBadge);
+        return;
+    }
+}
+
+// #############
+// ASSIGNMENT 6B
+// #############
+
 // DISPLAY BUN ARRAY TO BASKET PAGE
 // get basket list when basket page loads
-function onLoad() {
-    console.log("Testing page load");
+function basketOnLoad() {
+    let fullOrder = localStorage.getItem("fullOrder");
 }
 // loop through each bun in bun array
