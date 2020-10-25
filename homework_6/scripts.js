@@ -2,8 +2,6 @@
 // ASSIGNMENT 6A
 // #############
 
-// ADD BUN TO AN ARRAY
-
 // set up array for all orders
 let bunOrderArray = [];
 
