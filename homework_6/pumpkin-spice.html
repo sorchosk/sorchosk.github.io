@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Bun Bun Bake Shop</title>
 </head>
-<body class="page page--flavor" onload="basketCount();">
+<body class="page page--flavor" onload="onLoad();">
      <!-- Header -->
      <header>
         <div class="container header__container">
@@ -39,36 +39,36 @@
     <main>
         <div class="container">
             <div class="heading">
-                <h1 class="text-center">Pumpkin Spice</h1>
+                <h1 class="text-center" id="flavor">Pumpkin Spice</h1>
                 <p class="text-center text-large">The traditional fluffy, soft, and gooey cinnamon rolls that made us famous.</p>
                 <a class="text-center" href="./flavors.html">Change Flavor</a>
             </div>
 
             <div class="flavor__display">
                 <img src="img/2x/pumpkin-spice@2x.jpg" alt="Pumpkin Spice Bun" class="flavor__img">
-                <form class="flavor__variants">
+                <form class="flavor__variants" id="productForm">
                     <h2 class="flavor__h2">Customize your Order</h2>
                     <div class="flavor__btn-group">
                         <h3 class="flavor__h3">Select an Icing Flavor</h3>
                         <div class="btn-group">
-                            <button class="btn btn--secondary">None</button>
-                            <button class="btn btn--secondary">Sugar Milk</button>
-                            <button class="btn btn--secondary">Vanilla Milk</button>
-                            <button class="btn btn--secondary">Double Chocolate</button>
+                            <input type="radio" name="icing" value="None" class="btn btn--secondary">None</input>
+                            <input type="radio" name="icing" value="Sugar Milk" class="btn btn--secondary">Sugar Milk</input>
+                            <input type="radio" name="icing" value="Vanilla Milk" class="btn btn--secondary">Vanilla Milk</input>
+                            <input type="radio" name="icing" value="Double Chocolate" class="btn btn--secondary">Double Chocolate</input>
                         </div>
                     </div>
                     <div class="flavor__btn-group">
                         <h3 class="flavor__h3">Select an Amount</h3>
                         <div class="btn-group">
-                            <button class="btn btn--secondary">1</button>
-                            <button class="btn btn--secondary">3</button>
-                            <button class="btn btn--secondary">6</button>
-                            <button class="btn btn--secondary">12</button>
+                            <input type="radio" name="amount" value="1" class="btn btn--secondary" onchange="updateProductSubtotal()">1</input>
+                            <input type="radio" name="amount" value="3" class="btn btn--secondary" onchange="updateProductSubtotal()">3</input>
+                            <input type="radio" name="amount" value="6" class="btn btn--secondary" onchange="updateProductSubtotal()">6</input>
+                            <input type="radio" name="amount" value="12" class="btn btn--secondary" onchange="updateProductSubtotal()">12</input>
                         </div>
                     </div>
                     <div class="flavor__price">
-                        <h4 class="flavor__h4"><sup>&dollar;</sup>7.99</h4>
-                        <button class="btn btn--primary">Add to Basket</button>
+                        <h4 class="flavor__h4"><sup>&dollar;</sup><span id="productPageSubtotal">0</span></h4>
+                        <button type="button" class="btn btn--primary" onclick="addToBasket()">Add to Basket</button>
                     </div>
                 </form>
             </div>

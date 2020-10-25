@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Bun Bun Bake Shop</title>
 </head>
-<body class="page page--flavor" onload="basketCount();">
+<body class="page page--flavor" onload="onLoad();">
      <!-- Header -->
      <header>
         <div class="container header__container">
@@ -46,7 +46,7 @@
 
             <div class="flavor__display">
                 <img src="img/2x/original@2x.jpg" alt="Original Bun" class="flavor__img">
-                <form class="flavor__variants">
+                <form class="flavor__variants" id="productForm">
                     <h2 class="flavor__h2">Customize your Order</h2>
                     <div class="flavor__btn-group">
                         <h3 class="flavor__h3">Select an Icing Flavor</h3>
