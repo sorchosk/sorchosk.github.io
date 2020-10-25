@@ -10,7 +10,7 @@ let bunOrderArray = [];
 // Product Page Subtotal Variable
 let productPageSubtotal = document.getElementById("productPageSubtotal");
 
-// create a bun object (class?)
+// create a bun object class
 class bunOrder {
     constructor(flavor, icing, amount, subtotal) {
         this.flavor = flavor;
@@ -101,4 +101,5 @@ function basketCount() {
 function basketOnLoad() {
     let fullOrder = localStorage.getItem("fullOrder");
 }
+
 // loop through each bun in bun array
