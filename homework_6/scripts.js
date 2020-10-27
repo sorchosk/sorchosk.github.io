@@ -62,7 +62,21 @@ function basketCount() {
     }
 }
 
-// onclick function for bun
+// // ACTIVATE BUTTON
+// function activateAddToBasket() {
+//     // let addToBasket = document.getElementById("addToBasket");
+//     let icingValue = document.querySelector('input[name="icing"]:checked').value;
+//     let amountValue = document.querySelector('input[name="amount"]:checked').value;
+//     // if first button is selected
+//     // if second button is selected
+//     if (icingValue != null && amountValue != null) {
+//         console.log("Button Active");
+//     } else {
+//         console.log("Button Not Active");
+//     }
+// }
+
+// ONCLICK FUNCTIONS FOR BUNS
 function addToBasket() {
     console.log("Add to Basket Initiated");
     // get bun flavor
