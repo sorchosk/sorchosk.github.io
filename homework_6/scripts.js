@@ -62,19 +62,44 @@ function basketCount() {
     }
 }
 
-// // ACTIVATE BUTTON
-// function activateAddToBasket() {
-//     // let addToBasket = document.getElementById("addToBasket");
-//     let icingValue = document.querySelector('input[name="icing"]:checked').value;
-//     let amountValue = document.querySelector('input[name="amount"]:checked').value;
-//     // if first button is selected
-//     // if second button is selected
-//     if (icingValue != null && amountValue != null) {
-//         console.log("Button Active");
-//     } else {
-//         console.log("Button Not Active");
-//     }
-// }
+// ADD TO BASKET MODAL
+function addToBasketConfirmation() {
+    console.log('Order Confirmed');
+    let body = document.getElementsByTagName("body")[0];
+    let confirmationModalContainer = document.createElement("div");
+    confirmationModalContainer.className = "modal-container";
+    confirmationModalContainer.id = "confirmationModal";
+
+    // Remove button in the top right corner
+    let confirmationModal = document.createElement("div");
+    confirmationModal.className = "modal";
+    confirmationModal.innerHTML = "<img src='./img/svg/close.svg' class='modal-close' onclick='removeModal()' />"
+
+    // H2 text to validate it was added
+    let confirmationModalHeading = document.createElement("h2");
+    confirmationModalHeading.innerHTML = "Added to Basket";
+    confirmationModal.appendChild(confirmationModalHeading);
+
+    // Append buttons to the modal
+    let confirmationModalButtons = document.createElement("div");
+    confirmationModalButtons.className = "btn-group";
+    confirmationModalButtons.innerHTML = "<a href='./basket.html' class='btn btn--primary'>Checkout</a><a href='./flavors.html' class='btn btn--secondary'>Add More</a>"
+    confirmationModal.appendChild(confirmationModalButtons);
+
+    // Append modal to the container
+    confirmationModalContainer.appendChild(confirmationModal);
+
+    // Append container to the body of the page
+    body.appendChild(confirmationModalContainer);
+}
+
+// REMOVE MODAL
+function removeModal() {
+    console.log("Remove Modal Activated");
+    modal = document.getElementById("confirmationModal");
+    confirmationModal.remove()
+    return;
+}
 
 // ONCLICK FUNCTIONS FOR BUNS
 function addToBasket() {
@@ -106,6 +131,10 @@ function addToBasket() {
 
     // refresh basket badge count
     basketCount();
+
+    // Order Confirmation Modal
+    addToBasketConfirmation();
+
     // Clear form fields
     document.getElementById("productForm").reset();
 
