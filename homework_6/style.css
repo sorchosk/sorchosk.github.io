@@ -130,6 +130,7 @@ a {
 a.btn,
 input.btn {
     border: none;
+    cursor: pointer;
     font-family: var(--paragraph-font-stack);
     font-size: .85em;
     font-weight: 700;
