@@ -97,7 +97,8 @@ function addToBasketConfirmation() {
 function removeModal() {
     console.log("Remove Modal Activated");
     modal = document.getElementById("confirmationModal");
-    confirmationModal.remove()
+    confirmationModal.remove();
+    document.location.reload();
     return;
 }
 
