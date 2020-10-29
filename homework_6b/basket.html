@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bun Bun Bake Shop</title>
+</head>
+<body class="page page--cart" onload="onLoad(); basketOnLoad();">
+     <!-- Header -->
+     <header>
+        <div class="container header__container">
+            <a href="index.html">
+                <img src="img/SVG/logo--dark.svg" alt="Bun Bun Bake Shop Logo">
+            </a>
+            <nav class="header__nav">
+                <ul class="nav">
+                    <li class="header__li">
+                        <a href="./about.html" class="header__a">
+                            About Us
+                        </a>
+                    </li>
+                    <li class="header__li">
+                        <a href="./flavors.html" class="header__a btn btn--primary">
+                            Shop All Buns
+                        </a>
+                    </li>
+                    <li class="header__li">
+                        <a href="./basket.html" class="header__a" id="basket">
+                            <img src="img/SVG/basket.svg" alt="Basket">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <div class="heading">
+            <h1 class="text-center">Basket</h1>
+        </div>
+        <div class="container">
+            <div id="basketList">
+            </div>
+            <div>
+                <h4>Subtotal</h4>
+                <h3><sup>&dollar;</sup><span id="orderSubtotal">0.00</span></h3>
+            </div>
+            <div>
+                <button class="btn btn--secondary" onclick="clearAll()">Clear All</button>
+                <a href="#" class="btn btn--primary">Place Order</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container container__footer">
+            <div class="footer--left">
+                <ul class="nav footer__links">
+                    <li>
+                        <a href="./flavors.html">Shop All Buns</a>
+                    </li>
+                    <li>
+                        <a href="#">Log In</a>
+                    </li>
+                    <li>
+                        <a href="#">Create an Account</a>
+                    </li>
+                </ul>
+                <p class="footer__copyright">Copyright &copy; Bun Bun Bake Shop 2020. All Rights Reserved.</p>
+            </div>
+
+            <img src="img/SVG/bun.svg" alt="Bun">
+
+            <div class="footer--right">
+                <ul class="nav footer__links">
+                    <li>
+                        <a href="./about.html" class="">About Us</a>
+                    </li>
+                    <li>
+                        <a href="./privacy-policy.html">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#">Terms and Conditions</a>
+                    </li>
+                </ul>
+                <p class="footer__copyright">Icons by Noun Project. Photos by Pexels.com</p>
+            </div>
+        </div>
+    </footer>
+    <script src="./scripts.js"></script>
+</body>
+</html>
