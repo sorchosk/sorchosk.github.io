@@ -73,7 +73,7 @@ function addToBasketConfirmation() {
     // Remove button in the top right corner
     let confirmationModal = document.createElement("div");
     confirmationModal.className = "modal";
-    confirmationModal.innerHTML = "<img src='./img/svg/close.svg' class='modal-close' onclick='removeModal()' />"
+    confirmationModal.innerHTML = "<img src='./img/SVG/close.svg' class='modal-close' onclick='removeModal()' />"
 
     // H2 text to validate it was added
     let confirmationModalHeading = document.createElement("h2");
@@ -183,7 +183,7 @@ function renderBunOrder(bunOrder) {
     let basketItemRemoveButton = document.createElement("a");
     basketItemRemoveButton.className = "basket-item__remove"
     let basketItemRemoveButtonImg = document.createElement("img");
-    basketItemRemoveButtonImg.src="./img/svg/close.svg";
+    basketItemRemoveButtonImg.src="./img/SVG/close.svg";
     basketItemRemoveButton.appendChild(basketItemRemoveButtonImg);
     let basketItemRemoveButtonText = document.createElement("p");
     basketItemRemoveButtonText.innerText = "Remove";
