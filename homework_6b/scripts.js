@@ -160,7 +160,7 @@ function onLoad() {
 // #############
 
 // Convert bunOrder object classes to line items
-function renderBunOrder(bunOrder) {
+function renderBunOrder(bunOrder, count) {
     // Target the basketList ID in the DOM
     let basketList = document.getElementById("basketList");
 
@@ -182,10 +182,14 @@ function renderBunOrder(bunOrder) {
 
     // Add the remove button to each basket item
     let basketItemRemoveButton = document.createElement("a");
-    basketItemRemoveButton.className = "basket-item__remove"
+    basketItemRemoveButton.className = "basket-item__remove";
+    basketItemRemoveButton.setAttribute("item", count);
+    basketItemRemoveButton.setAttribute("onclick", "removeFromBasket(this.getAttribute('item'))");
+
     let basketItemRemoveButtonImg = document.createElement("img");
     basketItemRemoveButtonImg.src="./img/SVG/close.svg";
     basketItemRemoveButton.appendChild(basketItemRemoveButtonImg);
+
     let basketItemRemoveButtonText = document.createElement("p");
     basketItemRemoveButtonText.innerText = "Remove";
     basketItemRemoveButton.appendChild(basketItemRemoveButtonText);
@@ -209,11 +213,30 @@ function basketOnLoad() {
     } else {
         // Buns in local storage
         console.log("Start bun display");
+        let i = 0;
         fullOrder.forEach(bun => {
-            renderBunOrder(bun);
+            renderBunOrder(bun, i);
+            i++;
         });
     }
     return;
+}
+
+// REMOVE AN ITEM FROM CART
+function removeFromBasket(item) {
+    // get basket list
+    let fullOrderJson = localStorage.getItem("fullOrder");
+    let fullOrder = JSON.parse(fullOrderJson);
+    // get number of this basket-item
+    let itemToRemove = item;
+    console.log("Remove at index: " + itemToRemove);
+    // remove that index from the cart
+    fullOrder.splice(itemToRemove, 1);
+    // set new order list to local storage
+    let newOrder = JSON.stringify(fullOrder);
+    localStorage.setItem("fullOrder", newOrder);
+    // refresh page
+    document.location.reload();
 }
 
 // CLEAR LOCALSTORAGE
@@ -222,3 +245,8 @@ function clearAll() {
     console.log("Storage Cleared");
     document.location.reload();
 }
+
+// #############
+// EXTRA CREDIT
+// #############
+
