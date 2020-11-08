@@ -5,6 +5,9 @@
 // set up array for all orders
 let bunOrderArray = [];
 
+// Array for wish list
+let bunWishList = [];
+
 // Product Page Subtotal Variable
 let productPageSubtotal = document.getElementById("productPageSubtotal");
 
@@ -19,7 +22,7 @@ class bunOrder {
     }
 }
 
-// change subtotal when amount button changes
+// CHANGE SUBTOTAL WHEN AMOUNT CHANGES
 function updateProductSubtotal() {
     // establish subtotal variable
     let productSubtotal = 0;
@@ -41,7 +44,7 @@ function updateProductSubtotal() {
     console.log(productSubtotal);
 }
 
-// DISPLAY NUMBER OF OBJECTS IN LOCAL STORAGE
+// DISPLAY NUMBER OF OBJECTS IN LOCAL STORAGE FOR fullOrder
 function basketCount() {
     let fullOrderJson = localStorage.getItem("fullOrder");
     // Parse local storage
@@ -143,16 +146,22 @@ function addToBasket() {
     return;
 }
 
-// When the page loads, convert local storage to the bunOrderArray
+// When the page loads, convert local storage to the bunOrderArray and wishListArray
 // and run the basketCount() function
 function onLoad() {
     let fullOrderJson = localStorage.getItem("fullOrder");
+    let fullWishListJson = localStorage.getItem("fullWishList");
     // Parse local storage
     let fullOrder = JSON.parse(fullOrderJson);
+    let fullWishList = JSON.parse(fullWishListJson);
     if (fullOrder != null) {
-        bunOrderArray = JSON.parse(localStorage.getItem("fullOrder"));
+        bunOrderArray = fullOrder;
     }
     basketCount();
+    if (fullWishList != null) {
+        bunWishListArray = fullWishList;
+    }
+    // Wish List 
 }
 
 // #############
@@ -205,7 +214,6 @@ function basketOnLoad() {
     let fullOrderJson = localStorage.getItem("fullOrder");
     // Parse local storage
     let fullOrder = JSON.parse(fullOrderJson);
-    let basketList = document.getElementById("basketList");
     // loop through each bun in bun array
     if (fullOrder == null) {
         // No buns to display
@@ -239,7 +247,7 @@ function removeFromBasket(item) {
     document.location.reload();
 }
 
-// CLEAR LOCALSTORAGE
+// CLEAR LOCALSTORAGE for fullOrder
 function clearAll() {
     localStorage.removeItem("fullOrder");
     console.log("Storage Cleared");
@@ -252,3 +260,93 @@ function clearAll() {
 
 // CREATE A WISH LIST
 
+// ADD TO WISH LIST MODAL
+function addToWishListConfirmation() {
+    console.log('Wish List Addition Confirmed');
+    let body = document.getElementsByTagName("body")[0];
+    let confirmationModalContainer = document.createElement("div");
+    confirmationModalContainer.className = "modal-container";
+    confirmationModalContainer.id = "confirmationModal";
+
+    // Remove button in the top right corner
+    let confirmationModal = document.createElement("div");
+    confirmationModal.className = "modal";
+    confirmationModal.innerHTML = "<img src='./img/SVG/close.svg' class='modal-close' onclick='removeModal()' />"
+
+    // H2 text to validate it was added
+    let confirmationModalHeading = document.createElement("h2");
+    confirmationModalHeading.innerHTML = "Added to Wish List";
+    confirmationModal.appendChild(confirmationModalHeading);
+
+    // Append buttons to the modal
+    let confirmationModalButtons = document.createElement("div");
+    confirmationModalButtons.className = "btn-group";
+    confirmationModalButtons.innerHTML = "<a href='./wishlist.html' class='btn btn--primary'>View Wish List</a><a href='./flavors.html' class='btn btn--secondary'>Add More</a>"
+    confirmationModal.appendChild(confirmationModalButtons);
+
+    // Append modal to the container
+    confirmationModalContainer.appendChild(confirmationModal);
+
+    // Append container to the body of the page
+    body.appendChild(confirmationModalContainer);
+}
+
+// ADD TO WISH LIST BUTTON CLICKED
+function addToWishList() {
+    console.log("Add to Wish List Initiated");
+    // get bun flavor
+    let flavor = document.getElementById("flavor").innerText.toLowerCase();
+    // get icing flavor
+    let icingValue = document.querySelector('input[name="icing"]:checked').value;
+    // get amount
+    let amountValue = document.querySelector('input[name="amount"]:checked').value;
+    // get subtotal
+    let productPageSubtotalValue = productPageSubtotal.innerHTML;
+    // get img thumbnail
+    let bunThumbnailImageURL = "./img/2x/thumb-" + flavor.split(' ').join('_') + "@2x.png";
+
+    // create a new bun object
+    let singleOrder = new bunOrder(flavor, icingValue, amountValue, productPageSubtotalValue, bunThumbnailImageURL);
+    console.log("singleOrder object: " + singleOrder);
+    // push singleOrder to the array
+    bunWishList.push(singleOrder);
+    console.log(bunWishList);
+    // convert to json value
+    const jsonSingleOrder = JSON.stringify(bunWishList);
+    // set local variable
+    let localStorage = window.localStorage;
+    // store the new array to local storage
+    localStorage.setItem("fullWishList", jsonSingleOrder);
+    console.log(localStorage.getItem("fullWishList"));
+
+    // Wish List Confirmation Modal
+    addToWishListConfirmation();
+
+    // Clear form fields
+    document.getElementById("productForm").reset();
+
+    console.log("Add to Wish List complete");
+    return;
+}
+
+// DISPLAY BUN ARRAY TO BASKET PAGE
+// get basket list when basket page loads
+function wishListOnLoad() {
+    let fullWishListJson = localStorage.getItem("fullWishList");
+    // Parse local storage
+    let fullWishList = JSON.parse(fullWishListJson);
+    // loop through each bun in bun array
+    console.log(fullWishList);
+    if (fullWishList == null) {
+        // No buns to display
+        return
+    } else {
+        // Buns in local storage
+        let j = 0;
+        fullWishList.forEach(bun => {
+            renderBunOrder(bun, j);
+            j++;
+        });
+    }
+    return;
+}
