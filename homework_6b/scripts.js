@@ -208,6 +208,9 @@ function renderBunOrder(bunOrder, count) {
     basketList.appendChild(basketItem);
 }
 
+// ORDER SUBTOTAL
+let fullOrderSubtotal = 0.0;
+
 // DISPLAY BUN ARRAY TO BASKET PAGE
 // get basket list when basket page loads
 function basketOnLoad() {
@@ -224,9 +227,12 @@ function basketOnLoad() {
         let i = 0;
         fullOrder.forEach(bun => {
             renderBunOrder(bun, i);
+            fullOrderSubtotal = parseFloat(fullOrderSubtotal) + parseFloat(bun.subtotal);
             i++;
         });
     }
+    let orderSubtotal = document.getElementById("orderSubtotal");
+    orderSubtotal.innerHTML = fullOrderSubtotal;
     return;
 }
 
@@ -329,6 +335,9 @@ function addToWishList() {
     return;
 }
 
+// WISHLIST SUBTOTAL
+let wishListSubtotal = 0;
+
 // DISPLAY BUN ARRAY TO BASKET PAGE
 // get basket list when basket page loads
 function wishListOnLoad() {
@@ -336,7 +345,7 @@ function wishListOnLoad() {
     // Parse local storage
     let fullWishList = JSON.parse(fullWishListJson);
     // loop through each bun in bun array
-    console.log(fullWishList);
+    // console.log(fullWishList);
     if (fullWishList == null) {
         // No buns to display
         return
@@ -345,9 +354,12 @@ function wishListOnLoad() {
         let j = 0;
         fullWishList.forEach(bun => {
             renderBunOrder(bun, j);
+            wishListSubtotal = parseFloat(wishListSubtotal) + parseFloat(bun.subtotal);
             j++;
         });
     }
+    let wishListSubtotalHTML = document.getElementById("wishListSubtotalHTML");
+    wishListSubtotalHTML.innerHTML = wishListSubtotal;
     return;
 }
 

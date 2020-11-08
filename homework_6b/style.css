@@ -596,6 +596,42 @@ h2.flavors__h2 {
     text-transform: uppercase;
 }
 
+.basket-subtotal {
+    margin: 2em 0 1em;
+}
+
+.basket-subtotal__h4 {
+    color: var(--gray);
+    font-size: .875em;
+    letter-spacing: .1em;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.basket-subtotal__h3 {
+    font-size: 3em;
+    margin: 0 0 .33em;
+    text-align: right;
+}
+
+.basket-subtotal__h3 sup {
+    color: var(--gray);
+    font-family: var(--paragraph-font-stack);
+    font-size: .5em;
+    vertical-align: .5em;
+}
+
+.basket-btn-group {
+    display: block;
+    position: relative;
+    right: 0;
+    text-align: right;
+}
+
+.basket-btn-group *:last-child {
+    margin-right: 0;
+}
+
 
 /*
 ###########
