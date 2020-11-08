@@ -350,3 +350,10 @@ function wishListOnLoad() {
     }
     return;
 }
+
+// CLEAR LOCALSTORAGE for fullWishList
+function clearWishList() {
+    localStorage.removeItem("fullWishList");
+    document.location.reload();
+    console.log("Wish List Storage Cleared");
+}
