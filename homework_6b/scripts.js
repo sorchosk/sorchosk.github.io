@@ -6,7 +6,7 @@
 let bunOrderArray = [];
 
 // Array for wish list
-let bunWishList = [];
+let bunWishListArray = [];
 
 // Product Page Subtotal Variable
 let productPageSubtotal = document.getElementById("productPageSubtotal");
@@ -158,10 +158,10 @@ function onLoad() {
         bunOrderArray = fullOrder;
     }
     basketCount();
+    // Wish List 
     if (fullWishList != null) {
         bunWishListArray = fullWishList;
     }
-    // Wish List 
 }
 
 // #############
@@ -309,14 +309,14 @@ function addToWishList() {
     let singleOrder = new bunOrder(flavor, icingValue, amountValue, productPageSubtotalValue, bunThumbnailImageURL);
     console.log("singleOrder object: " + singleOrder);
     // push singleOrder to the array
-    bunWishList.push(singleOrder);
-    console.log(bunWishList);
+    bunWishListArray.push(singleOrder);
+    console.log(bunWishListArray);
     // convert to json value
-    const jsonSingleOrder = JSON.stringify(bunWishList);
+    const jsonBunWishList = JSON.stringify(bunWishListArray);
     // set local variable
     let localStorage = window.localStorage;
     // store the new array to local storage
-    localStorage.setItem("fullWishList", jsonSingleOrder);
+    localStorage.setItem("fullWishList", jsonBunWishList);
     console.log(localStorage.getItem("fullWishList"));
 
     // Wish List Confirmation Modal
