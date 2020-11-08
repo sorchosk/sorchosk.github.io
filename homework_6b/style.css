@@ -632,6 +632,10 @@ MEDIA QUERIES
         display: block;
     }
 
+    .footer--right .nav {
+        justify-content: flex-end;;
+    }
+
     .footer--right p {
         text-align: right;
     }
