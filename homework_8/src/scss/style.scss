@@ -1,1 +1,12 @@
+// VENDOR FILES
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+// HELPERS
 @import 'helpers/variables.scss';
+@import 'helpers/fonts.scss';
+
+// COMPONENTS
+@import 'components/typography.scss';
+
+// LAYOUTS
+@import 'layouts/global.scss';
