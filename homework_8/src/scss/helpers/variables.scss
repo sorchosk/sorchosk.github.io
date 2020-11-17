@@ -1,5 +1,4 @@
 // Colors
-
 $black:       #1A1A1A;
 $gray:        #949189;
 $offwhite:    #F1EBDC;
@@ -13,4 +12,17 @@ $truewhite:   #fff;
 
 // Font Families
 $serif: 'DM Serif Display', Georgia, 'Times New Roman', Times, serif;
-$sans-serif: helvetica;
+$sans-serif: 'DM Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
+// Main Variable Overrides
+$body-bg: $black;
+$body-color: $offwhite;
+
+// Typography Variables Overrides
+$font-family-base: $sans-serif;
+$input-font-family: $sans-serif;
+
+$headings-font-family: $serif;
+$headings-color: $offwhite;
+
+// Link Variable Overrides

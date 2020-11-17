@@ -1,9 +1,55 @@
-h1 {
-    font-family: $serif;
-    font-size: 84px;
+h1, .h1 {
+    font-family: $headings-font-family;
+    font-size: $display2-size;
     font-style: normal;
-    font-weight: 400;
-    line-height: 108px;
+    font-weight: $font-weight-base;
+    line-height: $display-line-height;
     letter-spacing: -0.01em;
     text-align: center;
 }
+
+h2, .h2 {
+    font-size: 4.5em;
+    line-height: .825;
+    margin-bottom: 1.5em;
+}
+
+h3, .h3 {
+    font-size: 2.5em;
+    margin-bottom: 1.5em;
+}
+
+h4, h5, h6 {
+    font-family: $font-family-base;
+}
+
+// eyebrow header
+.eyebrow {
+    color: $offwhite;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.eyebrow:before {
+    background-color: $blue;
+    content: '';
+    display: inline-block;
+    height: .75em;
+    margin-right: .5em;
+    width: .75em;
+}
+
+// Paragraphs
+
+p, .p {
+    letter-spacing: .02em;
+    font-size: 1.2em;
+}
+
+.text-shadow {
+    text-shadow: 0 4px 4px rgba($black, .5);
+}
+
+// Other Styles
