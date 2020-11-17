@@ -1,5 +1,11 @@
 .jumbotron {
     align-items: center;
     display: flex;
-    height: calc(100vh - 56px);
+    height: 100vh;
+    margin-top: -3em !important;
+    position: relative;
+}
+
+.row {
+    margin: 3em auto;
 }

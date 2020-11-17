@@ -5372,7 +5372,7 @@ h1, .h1 {
 h2, .h2 {
   font-size: 4.5em;
   line-height: .825;
-  margin-bottom: 1.5em; }
+  margin-bottom: .5em; }
 
 h3, .h3 {
   font-size: 2.5em;
@@ -5406,7 +5406,16 @@ p, .p {
 img {
   box-sizing: border-box; }
 
+footer {
+  background-color: #0c0c0c;
+  padding: 1em 0; }
+
 .jumbotron {
   align-items: center;
   display: flex;
-  height: calc(100vh - 56px); }
+  height: 100vh;
+  margin-top: -3em !important;
+  position: relative; }
+
+.row {
+  margin: 3em auto; }
