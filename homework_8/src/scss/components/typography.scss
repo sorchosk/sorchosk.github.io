@@ -1,11 +1,19 @@
 h1, .h1 {
     font-family: $headings-font-family;
-    font-size: $display2-size;
+    font-size: 3.5em;
     font-style: normal;
     font-weight: $font-weight-base;
     line-height: $display-line-height;
     letter-spacing: -0.01em;
     text-align: center;
+
+    @include md {
+        font-size: 4.5em;
+    }
+
+    @include lg {
+        font-size: 6em;
+    }
 }
 
 h2, .h2 {

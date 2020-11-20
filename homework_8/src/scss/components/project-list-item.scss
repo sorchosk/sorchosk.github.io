@@ -1,0 +1,27 @@
+.project-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.project-list-item {
+    a {
+        text-decoration: none;
+
+        &:hover {
+            color: $offwhite;
+        }
+    }
+
+    img {
+        opacity: .3;
+    }
+
+    .project-list-item__text {
+        position: relative;
+        top: -1.5em;
+    }
+
+    h3, .h3 {
+        margin-bottom: .5em;
+    }
+}

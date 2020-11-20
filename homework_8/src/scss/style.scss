@@ -2,6 +2,7 @@
 @import 'helpers/variables.scss';
 @import 'helpers/fonts.scss';
 @import 'helpers/utilities.scss';
+@import 'helpers/mixins.scss';
 
 /*!
  * Bootstrap v4.5.3 (https://getbootstrap.com/)
@@ -58,6 +59,7 @@
 @import 'components/media.scss';
 @import 'components/header.scss';
 @import 'components/footer.scss';
+@import 'components/project-list-item.scss';
 
 // LAYOUTS
 @import 'layouts/global.scss';
