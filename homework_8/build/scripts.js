@@ -43,25 +43,27 @@ const projects = [
 const projectList = document.getElementById("projectList");
 let projectLoop = () => {
     for (let project in projects) {
+        // variables for project object properties
         let title = projects[project].title;
         let mobileImg = projects[project].mobileImg;
         let desktopImg = projects[project].desktopImg;
         let description = projects[project].description;
         let url = projects[project].url;
 
+        // create project li element
         let projectListItem = document.createElement('li');
-        projectListItem.classList = "project-list-item col-12 col-md-6";
+        projectListItem.classList = "project-list-item d-block col-12 d-md-flex col-md-6";
+        // html with project properties
         projectListItem.innerHTML = `
         <a href="` + url + `">
-            <img src="` + mobileImg + `" alt="` + title + `" class="img-fluid col-12 d-block d-md-none">
-            <img src="` + desktopImg + `" alt="` + title + `" class="img-fluid col-4 d-none d-md-block">
-            <div class="project-list-item__text col-12">
+            <img src="` + mobileImg + `" alt="` + title + `" class="img-fluid col-12 d-block d-md-none project-list-item__img">
+            <img src="` + desktopImg + `" alt="` + title + `" class="img-fluid col-8 d-none d-md-block project-list-item__img">
+            <div class="project-list-item__text col-12 col-md-8">
                 <h3>` + title + `</h3>
                 <p>` + description + `</p>
             </div>
-        </a>
-        `
-        
+        </a>`
+        // append to #projectList
         projectList.appendChild(projectListItem);
     }
 }

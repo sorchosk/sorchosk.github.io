@@ -4,6 +4,9 @@
 }
 
 .project-list-item {
+    margin-bottom: 4em;
+    position: relative; 
+
     a {
         text-decoration: none;
 
@@ -12,16 +15,55 @@
         }
     }
 
-    img {
+    .project-list-item__img {
         opacity: .3;
+        position: relative;
+
+        @include md {
+            height: 20em;
+            object-fit: cover;
+        }
+
+        @include lg {
+            height: 28em;
+        }
     }
 
     .project-list-item__text {
         position: relative;
         top: -1.5em;
+
+        @include md {
+            align-items: flex-start;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            position: absolute;
+            bottom: 0;
+        }
     }
 
     h3, .h3 {
         margin-bottom: .5em;
+    }
+
+    @include md {
+        &:nth-child(odd) {
+
+            .project-list-item__img {
+                margin-left: 33.3333%;
+            }
+        }
+
+        &:nth-child(even) {
+
+            .project-list-item__text {
+                margin-left: 33.3333%;
+            }
+        }
+
+        // &:nth-child(2) {
+        //     margin-top: 8em;
+        // }
     }
 }
