@@ -10,6 +10,14 @@ $accentdark:  #042C93;
 $trueblack:   #0c0c0c;
 $truewhite:   #fff;
 
+// Links
+$link-color: $offwhite;
+$link-hover-color: $accent;
+
+// Button Colors
+$primary: $accent;
+$secondary: $offwhite;
+
 // Font Families
 $serif: 'DM Serif Display', Georgia, 'Times New Roman', Times, serif;
 $sans-serif: 'DM Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
