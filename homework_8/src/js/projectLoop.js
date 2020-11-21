@@ -31,7 +31,7 @@ const projects = [
         url: './us-playing-card.html'
     },
     {
-        title: 'Braxton Brewing Company',
+        title: 'Braxton Brewing Co.',
         mobileImg: 'img/thumbnails/braxton-thumb--mobile@2x.jpg',
         desktopImg: 'img/thumbnails/braxton-thumb@2x.jpg',
         description: 'Wordpress website for a craft brewery in Covington, KY',
@@ -52,12 +52,12 @@ let projectLoop = () => {
 
         // create project li element
         let projectListItem = document.createElement('li');
-        projectListItem.classList = "project-list-item d-block col-12 d-md-flex col-md-6";
+        projectListItem.classList = "project-list-item d-block col-12 d-md-flex col-lg-6";
         // html with project properties
         projectListItem.innerHTML = `
         <a href="` + url + `">
-            <img src="` + mobileImg + `" alt="` + title + `" class="img-fluid col-12 d-block d-md-none project-list-item__img">
-            <img src="` + desktopImg + `" alt="` + title + `" class="img-fluid col-8 d-none d-md-block project-list-item__img">
+            <img src="` + mobileImg + `" alt="` + title + `" class="img-fluid col-12 d-block d-lg-none project-list-item__img">
+            <img src="` + desktopImg + `" alt="` + title + `" class="img-fluid col-8 d-none d-lg-block project-list-item__img">
             <div class="project-list-item__text col-12 col-md-8">
                 <h3>` + title + `</h3>
                 <p>` + description + `</p>

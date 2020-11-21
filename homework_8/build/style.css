@@ -5447,6 +5447,11 @@ footer {
 .project-list {
   list-style-type: none;
   padding: 0; }
+  @media (min-width: 991.98px) {
+    .project-list {
+      -webkit-column-count: 2;
+      -moz-column-count: 2;
+      column-count: 2; } }
 
 .project-list-item {
   margin-bottom: 4em;
@@ -5456,33 +5461,54 @@ footer {
     .project-list-item a:hover {
       color: #F1EBDC; }
   .project-list-item .project-list-item__img {
+    display: block;
+    max-width: none;
     opacity: .3;
-    position: relative; }
-    @media (min-width: 767.98px) {
-      .project-list-item .project-list-item__img {
-        height: 20em;
-        object-fit: cover; } }
+    position: relative;
+    width: 100%; }
     @media (min-width: 991.98px) {
       .project-list-item .project-list-item__img {
-        height: 28em; } }
+        height: 28em;
+        object-fit: cover; } }
   .project-list-item .project-list-item__text {
-    position: relative;
-    top: -1.5em; }
+    margin-top: 1em;
+    position: relative; }
     @media (min-width: 767.98px) {
       .project-list-item .project-list-item__text {
         align-items: flex-start;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        position: absolute;
-        bottom: 0; } }
+        margin-top: -11em;
+        padding-bottom: 3em;
+        position: relative; } }
   .project-list-item h3, .project-list-item .h3 {
     margin-bottom: .5em; }
   @media (min-width: 767.98px) {
     .project-list-item:nth-child(odd) .project-list-item__img {
-      margin-left: 33.3333%; }
+      max-width: none;
+      padding-left: 33.3333%;
+      width: 100%; }
+    .project-list-item:nth-child(odd) .project-list-item__text {
+      margin-right: 33.3333%; }
+    .project-list-item:nth-child(even) .project-list-item__img {
+      max-width: none;
+      padding-right: 33.3333%;
+      width: 100%; }
     .project-list-item:nth-child(even) .project-list-item__text {
       margin-left: 33.3333%; } }
+  @media (min-width: 991.98px) {
+    .project-list-item {
+      margin-bottom: -4em;
+      height: 28em; }
+      .project-list-item:nth-child(odd) .project-list-item__text {
+        bottom: 0;
+        position: absolute; }
+      .project-list-item:nth-child(even) {
+        margin-top: 8em; }
+        .project-list-item:nth-child(even) .project-list-item__text {
+          bottom: 0;
+          position: absolute; } }
 
 .jumbotron {
   align-items: center;
@@ -5493,3 +5519,6 @@ footer {
 
 .row {
   margin: 3em auto; }
+
+section {
+  margin: 8em 0; }

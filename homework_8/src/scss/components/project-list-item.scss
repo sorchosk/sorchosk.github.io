@@ -1,6 +1,12 @@
 .project-list {
     list-style-type: none;
     padding: 0;
+
+    @include lg {
+        -webkit-column-count: 2;
+        -moz-column-count:2;
+        column-count: 2;
+    }
 }
 
 .project-list-item {
@@ -16,30 +22,30 @@
     }
 
     .project-list-item__img {
+        display: block;
+        max-width: none;
         opacity: .3;
         position: relative;
-
-        @include md {
-            height: 20em;
-            object-fit: cover;
-        }
+        width: 100%;
 
         @include lg {
             height: 28em;
+            object-fit: cover;
         }
     }
 
     .project-list-item__text {
+        margin-top: 1em;
         position: relative;
-        top: -1.5em;
 
         @include md {
             align-items: flex-start;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-            position: absolute;
-            bottom: 0;
+            margin-top: -11em;
+            padding-bottom: 3em;
+            position: relative;
         }
     }
 
@@ -48,22 +54,52 @@
     }
 
     @include md {
+
         &:nth-child(odd) {
 
             .project-list-item__img {
-                margin-left: 33.3333%;
+                max-width: none;
+                padding-left: 33.3333%;
+                width: 100%;
+            }
+
+            .project-list-item__text {
+                margin-right: 33.3333%;
             }
         }
 
         &:nth-child(even) {
+            .project-list-item__img {
+                max-width: none;
+                padding-right: 33.3333%;
+                width: 100%;
+            }
 
             .project-list-item__text {
                 margin-left: 33.3333%;
             }
         }
+    }
 
-        // &:nth-child(2) {
-        //     margin-top: 8em;
-        // }
+    @include lg {
+        margin-bottom: -4em; 
+        height: 28em;
+
+        &:nth-child(odd) {
+
+            .project-list-item__text {
+                bottom: 0;
+                position: absolute;
+            }
+        }
+
+        &:nth-child(even) {
+            margin-top: 8em;
+
+            .project-list-item__text {
+                bottom: 0;
+                position: absolute;
+            }
+        }
     }
 }
