@@ -1,20 +1,15 @@
 .project-list {
     list-style-type: none;
     padding: 0;
-
-    @include lg {
-        -webkit-column-count: 2;
-        -moz-column-count:2;
-        column-count: 2;
-    }
 }
 
 .project-list-item {
     margin-bottom: 4em;
-    position: relative; 
+    position: relative;
 
     a {
         text-decoration: none;
+        
 
         &:hover {
             color: $offwhite;
@@ -30,13 +25,22 @@
 
         @include lg {
             height: 28em;
-            object-fit: cover;
+            background-size: auto 100%;
+            background-position: center center;
+            transition: background-size .3s ease-in-out;
+        }
+    }
+
+    &:hover {
+        .project-list-item__img {
+            background-size: auto 110%;
         }
     }
 
     .project-list-item__text {
         margin-top: 1em;
         position: relative;
+        z-index: 5;
 
         @include md {
             align-items: flex-start;
@@ -60,7 +64,6 @@
             .project-list-item__img {
                 max-width: none;
                 padding-left: 33.3333%;
-                width: 100%;
             }
 
             .project-list-item__text {
@@ -72,12 +75,15 @@
             .project-list-item__img {
                 max-width: none;
                 padding-right: 33.3333%;
-                width: 100%;
             }
 
             .project-list-item__text {
                 margin-left: 33.3333%;
             }
+        }
+
+        .project-list-item__img {
+            width: 100%;
         }
     }
 
@@ -85,20 +91,29 @@
         margin-bottom: -4em; 
         height: 28em;
 
+        .project-list-item__text {
+            position: absolute;
+            bottom: 0;
+        }
+
+        .project-list-item__img {
+            position: absolute;
+            width: 18em;
+        }
+
         &:nth-child(odd) {
 
-            .project-list-item__text {
-                bottom: 0;
-                position: absolute;
+            .project-list-item__img {
+                right: 0;
+                padding: 0;
             }
         }
 
         &:nth-child(even) {
             margin-top: 8em;
 
-            .project-list-item__text {
-                bottom: 0;
-                position: absolute;
+            .project-list-item__img {
+                padding: 0;
             }
         }
     }
