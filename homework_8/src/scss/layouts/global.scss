@@ -1,13 +1,12 @@
-.jumbotron {
-    align-items: center;
-    display: flex;
-    height: 100vh;
-    margin-top: 0 !important;
-    position: relative;
-}
-
 .row {
     margin: 3em auto;
+}
+
+.no-gutters .col {
+    
+    p, h5 {
+        padding-right: 1em;
+    }
 }
 
 section {
