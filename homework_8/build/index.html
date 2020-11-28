@@ -7,11 +7,13 @@
 
     <!-- Vendor -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body onload="projectLoop()">
+<body onload="projectLoop(); fadeInPage()">
+    <svg id="fader"></svg>
     <header>
         <nav class="navbar navbar-dark fixed-top">
             <a href="./" class="navbar-brand logo">
@@ -24,11 +26,11 @@
     <main class="container">
         <!-- Cover -->
         <div class="row jumbotron">
-            <h1>Hi, I&rsquo;m Steve Orchosky,<br>Interaction Designer &amp; Digital Strategist</h1>
+            <h1 class="jumbotron__h1">Hi, I&rsquo;m Steve Orchosky,<br>Interaction Designer &amp; Digital Strategist</h1>
         </div>
 
         <!-- About -->
-        <section class="row position-relative d-flex align-items-center">
+        <section class="row position-relative d-flex align-items-center reveal">
             <img class="d-block d-md-none my-5 col-12" src="img/steve-portrait--mobile@2x.png" alt="Portrait of Steve">
             <img class="d-none d-md-block my-5 position-absolute col-12 col-md-5 offset-md-7 opacity-70" src="img/steve-portrait@2x.png" alt="Portrait of Steve">
             <div>
@@ -44,7 +46,7 @@
         </section>
 
         <!-- Projects -->
-        <section class="projects">
+        <section class="projects reveal">
             <h2 class="col-12">Recent Projects</h2>
             <ul class="row position-relative project-list" id="projectList">
 
@@ -53,7 +55,7 @@
     </main>
 
     <!-- Footer -->
-    <div class="container">
+    <div class="container reveal">
         <div class="row">
             <h2 class="col-12">Let&rsquo;s work together</h2>
             <p class="col-12 col-md-8 offset-md-2">I&rsquo;m currently looking for fulltime and contract opportunities upon graduating from my Master&rsquo;s of Human-Computer Interaction from Carnegie Mellon. Please reach out to me at <a href="mailto:steve@steveorchosky.com">steve@steveorchosky.com</a> to discuss projects, or just to say hello.</p>
@@ -63,11 +65,11 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-12 col-sm-12 col-lg-6">
+                <div class="col-12 col-sm-12 col-lg-5">
                     <h4>Steve Orchosky</h4>
                     <p>Interaction Designer &amp; Digital Strategist</p>
                 </div>
-                <div class="col-12 col-sm-8 col-lg-3">
+                <div class="col-12 col-sm-8 col-lg-4">
                     <h4>Contact</h4>
                     <a href="mailto:steve@steveorchosky.com">steve@steveorchosky.com</a>
                 </div>

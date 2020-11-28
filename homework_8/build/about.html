@@ -7,11 +7,13 @@
 
     <!-- Vendor -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body onload="workLoop()">
+<body onload="workLoop(); fadeInPage()">
+    <svg id="fader"></svg>
     <header>
         <nav class="navbar navbar-dark fixed-top">
             <a href="./" class="navbar-brand logo">
@@ -100,11 +102,11 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-12 col-sm-12 col-lg-6">
+                <div class="col-12 col-sm-12 col-lg-5">
                     <h4>Steve Orchosky</h4>
                     <p>Interaction Designer &amp; Digital Strategist</p>
                 </div>
-                <div class="col-12 col-sm-8 col-lg-3">
+                <div class="col-12 col-sm-8 col-lg-4">
                     <h4>Contact</h4>
                     <a href="mailto:steve@steveorchosky.com">steve@steveorchosky.com</a>
                 </div>
