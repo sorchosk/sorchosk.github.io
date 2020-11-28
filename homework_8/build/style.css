@@ -5527,8 +5527,15 @@ header nav {
   margin-top: 0 !important;
   position: relative; }
 
+.jumbotron__text {
+  display: block;
+  z-index: 5; }
+
 .jumbotron__h1 {
   z-index: 5; }
+
+.jumbotron__p {
+  font-size: 1.5em; }
 
 .jumbotron__img {
   height: 70vw;
@@ -5645,3 +5652,13 @@ footer {
 
 section {
   margin: 8em 0; }
+
+.masonry {
+  -moz-column-count: 3;
+  column-count: 3;
+  -moz-column-gap: 1em;
+  column-gap: 1em;
+  display: flex;
+  width: 100%; }
+  .masonry .item {
+    display: inline-block; }

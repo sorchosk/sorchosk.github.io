@@ -7,8 +7,17 @@
     position: relative;
 }
 
+.jumbotron__text {
+    display: block;
+    z-index: 5;
+}
+
 .jumbotron__h1 {
     z-index: 5;
+}
+
+.jumbotron__p {
+    font-size: 1.5em;
 }
 
 .jumbotron__img {
