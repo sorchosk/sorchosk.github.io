@@ -5482,8 +5482,12 @@ h4, h5, h6 {
   width: .75em; }
 
 p, .p {
+  font-size: 1em;
   letter-spacing: .02em;
-  font-size: 1em; }
+  line-height: 1.75; }
+  @media (min-width: 991.98px) {
+    p, .p {
+      font-size: 1.2em; } }
 
 .text-shadow {
   text-shadow: 0 4px 4px rgba(25, 33, 56, 0.5); }
@@ -5547,6 +5551,38 @@ header nav {
   position: absolute;
   width: 70vw;
   max-width: 70vh; }
+
+.prev-next .project-list-item .prev-next-label {
+  padding: 0; }
+
+.prev-next .project-list-item .prev-label:before {
+  background-color: transparent;
+  content: '';
+  display: inline-block;
+  margin-right: .5em;
+  width: 0;
+  height: 0;
+  border-top: .4em solid transparent;
+  border-bottom: .4em solid transparent;
+  border-right: 0.6em solid #007bff; }
+
+.prev-next .project-list-item .next-label:before {
+  display: none; }
+
+.prev-next .project-list-item .next-label:after {
+  background-color: transparent;
+  content: '';
+  display: inline-block;
+  margin-left: .5em;
+  width: 0;
+  height: 0;
+  border-top: .4em solid transparent;
+  border-bottom: .4em solid transparent;
+  border-left: 0.6em solid #007bff; }
+
+@media (min-width: 991.98px) {
+  .prev-next .project-list-item:nth-child(even) {
+    margin-top: 0em; } }
 
 footer {
   background-color: #050E27;

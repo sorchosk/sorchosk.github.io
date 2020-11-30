@@ -52,8 +52,13 @@ h4, h5, h6 {
 // Paragraphs
 
 p, .p {
-    letter-spacing: .02em;
     font-size: 1em;
+    letter-spacing: .02em;
+    line-height: 1.75;
+
+    @include lg {
+        font-size: 1.2em;
+    }
 }
 
 .text-shadow {

@@ -1,0 +1,48 @@
+.prev-next {
+
+    .project-list-item {
+
+        .prev-next-label {
+            padding: 0;
+        }
+
+        .prev-label {
+            &:before {
+                background-color: transparent;
+                content: '';
+                display: inline-block;
+                margin-right: .5em;
+                width: 0; 
+                height: 0; 
+                border-top: .4em solid transparent;
+                border-bottom: .4em solid transparent; 
+                border-right: .6em solid $blue; 
+            }
+        }
+
+        .next-label {
+            &:before {
+                display: none;
+            }
+            
+            &:after {
+                background-color: transparent;
+                content: '';
+                display: inline-block;
+                margin-left: .5em;
+                width: 0; 
+                height: 0; 
+                border-top: .4em solid transparent;
+                border-bottom: .4em solid transparent; 
+                border-left: .6em solid $blue; 
+            }
+        }
+    
+        @include lg {
+
+            &:nth-child(even) {
+                margin-top: 0em;
+            }
+        }
+    }
+}
