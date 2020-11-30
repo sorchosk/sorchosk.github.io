@@ -34,5 +34,49 @@ let prevNextProjects = () => {
 
     console.log('Next project Index: ' + nextProjectIndex);
 
+    // ######################
+    // Render project displays
+    // ######################
+
+    let prevNextProjectsDiv = document.getElementById('prevNextProjects');
+
+    // Previous project
+    let prevProject = projects[prevProjectIndex];
+    let prevProjectDiv = document.createElement('div');
+    prevProjectDiv.classList = "project-list-item d-block col-12 d-md-flex col-lg-6";
+    prevProjectDiv.innerHTML = `
+    <a href="` + prevProject.url + `" class="col-12">
+        <img src="` + prevProject.mobileImg + `" alt="U.S. Playing Card" class="img-fluid col-12 d-block d-lg-none project-list-item__img">
+        <div class="img-fluid col-8 d-none d-lg-block project-list-item__img" style="background-image: url('` + prevProject.desktopImg + `');">
+        </div>
+        <div class="project-list-item__text col-12 col-md-8">
+            <p class="col-12 text-left eyebrow prev-next-label prev-label">prev</p>
+            <h3>` + prevProject.title + `</h3>
+            <p>`+ prevProject.description +`</p>
+        </div>
+    </a>
+    `
+
+    prevNextProjectsDiv.appendChild(prevProjectDiv);
+
+    // Next project
+    let nextProject = projects[nextProjectIndex];
+    let nextProjectDiv = document.createElement('div');
+    nextProjectDiv.classList = "project-list-item d-block col-12 d-md-flex col-lg-6";
+    nextProjectDiv.innerHTML = `
+    <a href="` + nextProject.url + `" class="col-12">
+        <img src="` + nextProject.mobileImg + `" alt="U.S. Playing Card" class="img-fluid col-12 d-block d-lg-none project-list-item__img">
+        <div class="img-fluid col-8 d-none d-lg-block project-list-item__img" style="background-image: url('` + nextProject.desktopImg + `');">
+        </div>
+        <div class="project-list-item__text col-12 col-md-8">
+            <p class="col-12 text-right eyebrow prev-next-label next-label">Next</p>
+            <h3 class="text-right">` + nextProject.title + `</h3>
+            <p class="text-right">`+ nextProject.description +`</p>
+        </div>
+    </a>
+    `
+
+    prevNextProjectsDiv.appendChild(nextProjectDiv);
+
     console.log('Project length: ' + projects.length);
 }
