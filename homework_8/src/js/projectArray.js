@@ -17,7 +17,7 @@ const projects = [
         mobileImg: 'img/thumbnails/usb-thumb--mobile@2x.jpg',
         desktopImg: 'img/thumbnails/usb-thumb@2x.jpg',
         description: 'Website design for leading mortgage and lending banks in OH and KY',
-        url: './union-savings-bank.html'
+        url: './usb.html'
     },
     {
         projectId: 'tempur-pedic',
@@ -33,7 +33,7 @@ const projects = [
         mobileImg: 'img/thumbnails/uspc-thumb--mobile@2x.jpg',
         desktopImg: 'img/thumbnails/uspc-thumb@2x.jpg',
         description: 'Website design for the leading playing card company in the United States',
-        url: './us-playing-card.html'
+        url: './uspc.html'
     },
     // {
     //     projectId: 'braxton',
