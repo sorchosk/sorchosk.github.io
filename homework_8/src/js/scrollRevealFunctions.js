@@ -1,3 +1,5 @@
+// scrollRevealFunctions.js
+
 let revealFromBottom = {
     distance: '150%',
     origin: 'bottom',

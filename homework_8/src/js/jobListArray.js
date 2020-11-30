@@ -1,4 +1,5 @@
 'use strict';
+// jobListArray.js
 
 // PROJECT ARRAY
 const jobList = [

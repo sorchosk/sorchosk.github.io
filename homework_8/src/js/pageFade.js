@@ -1,3 +1,5 @@
+// pageFade.js
+
 function fadeInPage() {
     if (!window.AnimationEvent) { 
         return; 

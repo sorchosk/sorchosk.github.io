@@ -1,9 +1,8 @@
 'use strict';
-// projectLoop.js
+// prevNextProjects.js
 
 // PROJECT LOOP
-const projectList = document.getElementById("projectList");
-let projectLoop = () => {
+let prevNextProjects = () => {
     for (let project in projects) {
         // variables for project object properties
         let title = projects[project].title;

@@ -1,4 +1,5 @@
 'use strict';
+// projectArray.js
 
 // PROJECT ARRAY
 const projects = [
