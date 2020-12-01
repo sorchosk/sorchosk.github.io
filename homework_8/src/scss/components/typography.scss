@@ -31,6 +31,11 @@ h4, h5, h6 {
     font-family: $font-family-base;
 }
 
+.lead {
+   font-size: 1.5em; 
+   text-align: center;
+}
+
 // eyebrow header
 .eyebrow {
     color: $offwhite;
@@ -56,9 +61,9 @@ p, .p {
     letter-spacing: .02em;
     line-height: 1.75;
 
-    @include lg {
-        font-size: 1.2em;
-    }
+    // @include lg {
+    //     font-size: 1.1em;
+    // }
 }
 
 .text-shadow {

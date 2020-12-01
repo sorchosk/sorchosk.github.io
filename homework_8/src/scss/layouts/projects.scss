@@ -1,10 +1,13 @@
-.masonry {
-    column-count: 3;
-    column-gap: 1em;
-    display: flex;
-    width: 100%;
+.card-columns-2 {
 
-    .item {
-        display: inline-block;
+    @include md {
+        column-count: 2;
+    }
+}
+
+.card-columns-3 {
+
+    @include md {
+        column-count: 3;
     }
 }

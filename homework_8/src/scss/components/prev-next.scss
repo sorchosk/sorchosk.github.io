@@ -1,6 +1,13 @@
 .prev-next {
+    flex-direction: column-reverse;
+
+    @include lg {
+        flex-direction: row;
+    }
 
     .project-list-item {
+
+        margin-bottom: 0em;
 
         .prev-next-label {
             padding: 0;

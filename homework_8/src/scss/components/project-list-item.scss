@@ -1,6 +1,11 @@
 .project-list {
+    box-sizing: border-box;
     list-style-type: none;
     padding: 0;
+
+    @include lg {
+        padding-bottom: 6em;
+    }
 }
 
 .project-list-item {
@@ -8,6 +13,7 @@
     position: relative;
 
     a {
+        padding: 0;
         text-decoration: none;
         
 
@@ -49,7 +55,7 @@
             flex-direction: column;
             justify-content: flex-end;
             margin-top: -11em;
-            padding-bottom: 3em;
+            padding: 0 0 3em;
             position: relative;
         }
     }
@@ -89,7 +95,7 @@
     }
 
     @include lg {
-        margin-bottom: -4em; 
+        margin-bottom: -6em; 
         height: 28em;
 
         .project-list-item__text {
