@@ -8,7 +8,7 @@ let autoprefixer = require('gulp-autoprefixer');
 sass.compiler = require('node-sass');
  
 gulp.task('sass', function () {
-  return gulp.src('./src/scss/style.scss')
+  return gulp.src(['./src/scss/style.scss' ,'./src/scss/bootstrap.scss'])
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
       cascade: false
