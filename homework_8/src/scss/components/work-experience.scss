@@ -5,7 +5,7 @@
 
 .work-experience-item {
     border-bottom: 1px solid rgba($gray, .2);
-    padding: 2em 0;
+    padding: 3em 0;
 }
 
 .work-experience-meta {
@@ -22,4 +22,12 @@
 
 .work-experience__ul {
     padding: 0 15px;
+    margin-bottom: 0;
+}
+
+.work-experience__li {
+    margin-bottom: .5em;
+    &:last-child {
+        margin-bottom: 0;
+    }
 }

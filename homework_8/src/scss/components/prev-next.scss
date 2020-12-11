@@ -9,48 +9,89 @@
     .project-list-item {
 
         margin-bottom: 0em;
-
-        .prev-next-label {
-            padding: 0;
-        }
-
-        .prev-label {
-            &:before {
-                background-color: transparent;
-                content: '';
-                display: inline-block;
-                margin-right: .5em;
-                width: 0; 
-                height: 0; 
-                border-top: .4em solid transparent;
-                border-bottom: .4em solid transparent; 
-                border-right: .6em solid $blue; 
-            }
-        }
-
-        .next-label {
-            &:before {
-                display: none;
-            }
-            
-            &:after {
-                background-color: transparent;
-                content: '';
-                display: inline-block;
-                margin-left: .5em;
-                width: 0; 
-                height: 0; 
-                border-top: .4em solid transparent;
-                border-bottom: .4em solid transparent; 
-                border-left: .6em solid $blue; 
-            }
-        }
     
         @include lg {
 
             &:nth-child(even) {
                 margin-top: 0em;
             }
+        }
+    }
+}
+
+.prev-next-label {
+    padding: 0;
+}
+
+.prev-label {
+    &:before {
+        background-color: transparent;
+        content: '';
+        display: inline-block;
+        margin-right: .5em;
+        width: 0; 
+        height: 0; 
+        border-top: .4em solid transparent;
+        border-bottom: .4em solid transparent; 
+        border-right: .6em solid $blue; 
+    }
+}
+
+.next-label {
+    &:before {
+        display: none;
+    }
+    
+    &:after {
+        background-color: transparent;
+        content: '';
+        display: inline-block;
+        margin-left: .5em;
+        width: 0; 
+        height: 0; 
+        border-top: .4em solid transparent;
+        border-bottom: .4em solid transparent; 
+        border-left: .6em solid $blue; 
+    }
+}
+
+#mini-nav {
+    align-items: center;
+    bottom: 1em;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: calc(100vw - 2em);
+
+    a {
+        padding: 1em;
+        margin: 0;
+        text-decoration: none;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .prev-label:before,
+    .next-label:after {
+        transition: margin .2s ease-in-out;
+    }
+
+    .prev-label,
+    .next-label {
+        transition: color .2s ease-in-out;
+    }
+
+    .prev-label:hover {
+        &:before {
+            margin-right: .875em;
+        }
+    }
+
+    .next-label:hover {
+        &:after {
+            margin-left: .875em;
         }
     }
 }
