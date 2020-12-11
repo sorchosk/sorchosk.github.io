@@ -154,6 +154,9 @@ a {
 img {
   box-sizing: border-box; }
 
+.about-portrait--desktop {
+  margin-bottom: -26.5em; }
+
 /* HEADER */
 header nav {
   background-color: #192138; }
@@ -331,15 +334,17 @@ footer {
   padding: 0 15px; }
 
 /* ---- LAYOUTS ---- */
+/* GLOBAL */
 .row {
   margin: 3em auto; }
 
 .no-gutters .col p, .no-gutters .col h5 {
   padding-right: 1em; }
 
-section {
+section.row {
   margin: 6em 0; }
 
+/* PROJECTS */
 @media (min-width: 767.98px) {
   .card-columns-2 {
     -moz-column-count: 2;
